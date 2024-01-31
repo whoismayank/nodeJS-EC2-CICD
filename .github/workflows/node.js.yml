@@ -25,6 +25,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: pm2 delete server || true # Stop the existing PM2 process
-    - run: pm2 start server.js   # Start the server with PM2
+    - run: pm2 stop server || true
+    - run: pm2 delete server || true
+    - run: pm2 start server.js
+
 
