@@ -10,9 +10,7 @@ on:
 
 jobs:
   build:
-
     runs-on: self-hosted
-
     strategy:
       matrix:
         node-version: [20.x]
@@ -27,5 +25,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: pm2 restart server.js
-    
+    - run: pm2 delete server || true # Stop the existing PM2 process
+    - run: pm2 start server.js   # Start the server with PM2
+
