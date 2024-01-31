@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use("/", (req, res) => {
     res.json({
-        msg: "Hi I am Mahendra's latest Express app. what the f happening"
+        msg: "Hi I am Mahendra's latest Express app. what the f happening "
     })
 })
 
