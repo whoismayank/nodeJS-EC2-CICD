@@ -56,7 +56,7 @@ step 8-
 
 add the command in yml script of project to restart after every commit
 
--run: sudo pm2 restart server.js
+-run: sudo pm2 restart server.js --name=api
 
 step 9-
 
